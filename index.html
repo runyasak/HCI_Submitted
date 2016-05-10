@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="application">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HCI - Class Enrollment</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="bootstrap-4.0.0-alpha/scss/bootstrap.scss" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--AngularJS Javascript -->
+    <script src="src/js/angular.min.js"></script>
+    <script src="src/js/app.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+      <a class="navbar-brand" href="#">Class Enrollment</a>
+    </nav>
+    <div ng-controller="appController as app">
+    <form class="form-signin" ng-submit="login_submit(datas)">
+      <div class="container">
+          <h2 class="form-signin-heading">Please sign in</h2>
+          <label for="inputID" class="sr-only">Student ID</label>
+          <input class="form-control" ng-model="input_data.id" placeholder="Student ID" required="" autofocus="">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" class="form-control" ng-model="input_data.password" placeholder="Password" required="">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <!-- <button class="btn btn-lg btn-primary btn-block">Register</button> -->
+      </div>
+      </form>
+    </div>
+    
+  </body>
+</html>
